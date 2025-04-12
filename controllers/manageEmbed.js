@@ -4,23 +4,23 @@ const defaultDlEmbed = new EmbedBuilder()
 	.setColor(0x4e4e4e)
 	.setTitle('Dragonlord:')
 	.addFields(
-		{ name: 'Priest', value: 'unset', inline: true },
-		{ name: 'King', value: 'unset', inline: true },
-		{ name: 'Sreng', value: 'unset', inline: true },
-		{ name: 'Troll', value: 'unset', inline: true },
+		{ name: 'Bubbaguh(180)', value: 'unset', inline: true },
+		{ name: 'Grendel(170)', value: 'unset', inline: true },
+		{ name: 'Norman(165)', value: 'unset', inline: true },
+		{ name: 'Derpy(160)', value: 'unset', inline: true },
 	);
 
 const defaultEdlEmbed = new EmbedBuilder()
 	.setColor(0x4e4e4e)
 	.setTitle('Exalted Dragonlord:')
 	.addFields(
-		{ name: 'Onyx', value: 'unset', inline: true },
-		{ name: 'Skath', value: 'unset', inline: true },
-		{ name: 'Gron', value: 'unset', inline: true },
-		{ name: 'Dobby', value: 'unset', inline: true },
-        { name: 'Flappy', value: 'unset', inline: true },
-		{ name: 'Phantom', value: 'unset', inline: true },
-		{ name: 'Unox', value: 'unset', inline: true },
+		{ name: 'Doggy(180)', value: 'unset', inline: true },
+		{ name: 'MrPickles(190)', value: 'unset', inline: true },
+		{ name: 'Guh(195)', value: 'unset', inline: true },
+		{ name: 'Ratrat(200)', value: 'unset', inline: true },
+		{ name: 'MissPickles(205)', value: 'unset', inline: true },
+		{ name: 'Sleepy(210)', value: 'unset', inline: true },
+		{ name: 'MissPringles(215)', value: 'unset', inline: true },
 	);
 
 const defaultHeliEmbed = new EmbedBuilder()
@@ -38,15 +38,16 @@ const defaultEgEmbed = new EmbedBuilder()
 	.setTitle('End Game:')
 	.setDescription('Timers for when spawn windows open:')
 	.addFields(
-		{ name: 'Aggy', value: 'unset', inline: true},
-		{ name: 'Hrung', value: 'unset', inline: true },
-		{ name: 'Necro', value: 'unset', inline: true },
-		{ name: 'Mord', value: 'unset', inline: true },
-		{ name: 'Prot', value: 'unset', inline: true },
-		{ name: 'Gele', value: 'unset', inline: true },
-		{ name: 'Bt', value: 'unset', inline: true },
-		{ name: 'Dino', value: 'unset', inline: true },
+		{ name: 'Mocha', value: 'unset', inline: true },
+		{ name: 'Latte', value: 'unset', inline: true },
+		{ name: 'Kuromi', value: 'unset', inline: true },
+		{ name: 'Pompompurin', value: 'unset', inline: true },
+		{ name: 'Kanye', value: 'unset', inline: true },
+		{ name: 'BigYOSHI', value: 'unset', inline: true },
+		{ name: 'MrPlantPlant', value: 'unset', inline: true },
+		{ name: 'Milo', value: 'unset', inline: true },
 	);
+
 
 let embedMessage = null;
 let dlEmbed = null;
@@ -91,7 +92,7 @@ const editEmbeds = async (channel, bossName, newTime) => {
 				bossField.value = `<t:${newTime}:R>`;
 			}
 		})
-		embedMessage.edit({embeds: [dlEmbed, edlEmbed, heliEmbed, egEmebed]})
+		embedMessage.edit({ embeds: [dlEmbed, edlEmbed, heliEmbed, egEmebed] })
 	})
 }
 
@@ -112,7 +113,7 @@ const clearEmbeds = async (channel) => {
 			})
 		});
 
-		embedMessage.edit({embeds: [dlEmbed, edlEmbed, heliEmbed, egEmebed]})
+		embedMessage.edit({ embeds: [dlEmbed, edlEmbed, heliEmbed, egEmebed] })
 	})
 }
 
@@ -133,7 +134,7 @@ const clearSingleEmbed = async (channel, bossName) => {
 				bossField.value = `unset`;
 			}
 		})
-		embedMessage.edit({embeds: [dlEmbed, edlEmbed, heliEmbed, egEmebed]})
+		embedMessage.edit({ embeds: [dlEmbed, edlEmbed, heliEmbed, egEmebed] })
 	})
 }
 

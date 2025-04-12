@@ -4,37 +4,37 @@ const { createTimer } = require('../controllers/manageAlerts.js');
 const { timerChannel, alertChannel, resetChannel } = require('../config.json');
 
 module.exports = {
-	data: new SlashCommandBuilder()
-		.setName('creset')
-		.setDescription('Resets a single bosses timer with a custom time amount (in minutes)')
+    data: new SlashCommandBuilder()
+        .setName('creset')
+        .setDescription('Resets a single bosses timer with a custom time amount (in minutes)')
         .addStringOption(option =>
             option.setName('boss')
                 .setDescription('The boss timer to reset')
                 .setRequired(true)
                 .addChoices(
-                    { name: 'Priest', value: 'Priest' },
-                    { name: 'King', value: 'King' },
-                    { name: 'Sreng', value: 'Sreng' },
-                    { name: 'Troll', value: 'Troll' },
-                    { name: 'Onyx', value: 'Onyx' },
-                    { name: 'Skath', value: 'Skath' },
-                    { name: 'Gron', value: 'Gron' },
-                    { name: 'Dobby', value: 'Dobby' },
-                    { name: 'Flappy', value: 'Flappy' },
-                    { name: 'Phantom', value: 'Phantom' },
-                    { name: 'Unox', value: 'Unox' },
+                    { name: 'Bubbaguh(180)', value: 'Bubbaguh(180)' },
+                    { name: 'Grendel(170)', value: 'Grendel(170)' },
+                    { name: 'Norman(165)', value: 'Norman(165)' },
+                    { name: 'Derpy(160)', value: 'Derpy(160)' },
+                    { name: 'Doggy(180)', value: 'Doggy(180)' },
+                    { name: 'MrPickles(190)', value: 'MrPickles(190)' },
+                    { name: 'Guh(195)', value: 'Guh(195)' },
+                    { name: 'Ratrat(200)', value: 'Ratrat(200)' },
+                    { name: 'MissPickles(205)', value: 'MissPickles(205)' },
+                    { name: 'Sleepy(210)', value: 'Sleepy(210)' },
+                    { name: 'MissPringles(215)', value: 'MissPringles(215)' },
                     { name: 'Heli(prot)', value: 'Heli(prot)' },
                     { name: 'Heli(hall)', value: 'Heli(hall)' },
                     { name: 'Heli(eye)', value: 'Heli(eye)' },
                     { name: 'Heli(gele)', value: 'Heli(gele)' },
-                    { name: 'Aggy', value: 'Aggy' },
-                    { name: 'Hrung', value: 'Hrung' },
-                    { name: 'Necro', value: 'Necro' },
-                    { name: 'Mord', value: 'Mord' },
-                    { name: 'Prot', value: 'Prot' },
-                    { name: 'Gele', value: 'Gele' },
-                    { name: 'Bt', value: 'Bt' },
-                    { name: 'Dino', value: 'Dino' },
+                    { name: 'Mocha', value: 'Mocha' },
+                    { name: 'Latte', value: 'Latte' },
+                    { name: 'Kuromi', value: 'Kuromi' },
+                    { name: 'Pompompurin', value: 'Pompompurin' },
+                    { name: 'Kanye', value: 'Kanye' },
+                    { name: 'BigYOSHI', value: 'BigYOSHI' },
+                    { name: 'MrPlantPlant', value: 'MrPlantPlant' },
+                    { name: 'Milo', value: 'Milo' },
                 ))
         .addIntegerOption(option =>
             option.setName('time')
@@ -42,7 +42,7 @@ module.exports = {
                 .setMinValue(0)
                 .setMaxValue(34500)
                 .setRequired(true)),
-	async execute(interaction) {
+    async execute(interaction) {
         if (interaction.channelId == resetChannel) {
             let bossName = interaction.options.getString('boss');
             let customTime = interaction.options.getInteger('time');
@@ -59,5 +59,5 @@ module.exports = {
             await interaction.deferReply({ ephemeral: true })
             await interaction.deleteReply();
         }
-	}
+    }
 };
